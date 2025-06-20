@@ -1,9 +1,7 @@
-/* ---removable css--- */
 .main-container {
   display: flex;
   gap: 10px;
 }
-/* ---normal card--- */
 * {
   margin: 0;
   box-sizing: border-box;
