@@ -17,7 +17,7 @@
 
         <div class="card">
           <div id="editIcon" class="edit_icon">
-            <img src="pen.png" alt="Edit icon" />
+            <img src="assets/pen.png" alt="Edit icon" />
           </div>
           <div class="content">
             <div class="box1">
@@ -34,7 +34,7 @@
               <div class="description">
                 <div class="role">
                   <div>
-                    <img src="role.png" alt="Role icon" />
+                    <img src="assets/role.png" alt="Role icon" />
                   </div>
                   <div>
                     <p>Frontend Engineer</p>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="role">
                   <div>
-                    <img src="mail.png" alt="Mail icon" />
+                    <img src="assets/mail.png" alt="Mail icon" />
                   </div>
                   <div>
                     <p>aarav.mehta@exmple.com</p>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="role">
                   <div class="userbio_icon">
-                    <img src="userbio.png" alt="User bio icon" />
+                    <img src="assets/userbio.png" alt="User bio icon" />
                   </div>
                   <div>
                     <p>"Learning frontend development with focus on HTML, CSS, and React."</p>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="role">
                   <div>
-                    <img src="location.png" alt="Location icon" />
+                    <img src="assets/location.png" alt="Location icon" />
                   </div>
                   <div>
                     <p>Bangalore, India</p>
@@ -71,7 +71,7 @@
         <!-- edit -->
         <div class="card card_edit">
           <div id="viewIcon" class="edit_icon">
-            <img src="save.png" alt="Edit icon" />
+            <img src="assets/save.png" alt="Edit icon" />
           </div>
           <div class="content">
             <div class="box1">
@@ -85,7 +85,7 @@
 
               <div class="role profile_name">
                 <div>
-                  <img src="username.png" alt="Role icon" />
+                  <img src="assets/username.png" alt="Role icon" />
                 </div>
                 <div class="input_field">
                   <input type="text" value="Aarav Mehta" />
@@ -96,7 +96,7 @@
               <div class="description edit_description">
                 <div class="role">
                   <div>
-                    <img src="role.png" alt="Role icon" />
+                    <img src="assets/role.png" alt="Role icon" />
                   </div>
                   <div class="input_field">
                     <input type="text" value="Frontend Engineer" />
@@ -104,7 +104,7 @@
                 </div>
                 <div class="role">
                   <div>
-                    <img src="mail.png" alt="Mail icon" />
+                    <img src="assets/mail.png" alt="Mail icon" />
                   </div>
                   <div class="input_field">
                     <input type="text" value="aarav.mehta@exmple.com" />
@@ -113,7 +113,7 @@
                 </div>
                 <div class="role">
                   <div class="userbio_icon">
-                    <img src="userbio.png" alt="User bio icon" />
+                    <img src="assets/userbio.png" alt="User bio icon" />
                   </div>
                   <div class="textarea-div">
                     <textarea id="autoTextarea" class="custom-textarea" type="text" cols="30"
@@ -123,7 +123,7 @@
                 </div>
                 <div class="role">
                   <div>
-                    <img src="location.png" alt="Location icon" />
+                    <img src="assets/location.png" alt="Location icon" />
                   </div>
                   <div class="input_field">
                     <input type="text" value="Bangalore, India" />
@@ -139,36 +139,6 @@
   </div>
 </body>
 <!-- script -->
-<script>
-  let state = 'view';
-  const editIcon = document.getElementById("editIcon");
-  const viewIcon = document.getElementById("viewIcon");
-  const flipContainer = document.querySelector(".card-flip-container");
-
-  viewIcon.addEventListener('click', function () {
-    const name = document.querySelector('.card_edit input[type="text"]').value;
-    const role = document.querySelectorAll('.card_edit input[type="text"]')[1].value;
-    const email = document.querySelectorAll('.card_edit input[type="text"]')[2].value;
-    const bio = document.querySelector('.card_edit textarea').value;
-    const location = document.querySelectorAll('.card_edit input[type="text"]')[3].value;
-
-    document.querySelector('.applicant_name').textContent = name;
-    document.querySelectorAll('.card .role p')[0].textContent = role;
-    document.querySelectorAll('.card .role p')[1].textContent = email;
-    document.querySelectorAll('.card .role p')[2].textContent = `"${bio}"`;
-    document.querySelectorAll('.card .role p')[3].textContent = location;
-
-    state = "view";
-    console.log("view");
-    flipContainer.classList.remove("flipped");
-  });
-
-  editIcon.addEventListener('click', function () {
-    state = "edit";
-    console.log("edit");
-    flipContainer.classList.add("flipped");
-  });
-</script>
-
+<script src="./script.js"></script>
 
 </html>
